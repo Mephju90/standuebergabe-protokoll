@@ -21,6 +21,7 @@ Das PDF wird in dieser Version nur generiert und direkt im Browser angezeigt. -N
 
 - PHP
 - HTML5 & CSS3
+- Bootstrap
 - JavaScript
 - SeaTable API (im Original)
 - Webhosting bei Ionos 
