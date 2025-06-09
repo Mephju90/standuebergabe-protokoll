@@ -1,0 +1,542 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --dark-gray: #d9d9d9;
+  --red: #e52a24;
+  --dark-red: #4b0806;
+  --light-gray: #f2f2f2;
+  --green: green;
+}
+
+/**********
+ FONTS 
+ **********/
+@font-face {
+  font-family: "regelmann";
+  src: url("font/regelmann.eot?80900792");
+  src: url("font/regelmann.eot?80900792#iefix") format("embedded-opentype"),
+    url("font/regelmann.woff2?80900792") format("woff2"),
+    url("font/regelmann.woff?80900792") format("woff"),
+    url("font/regelmann.ttf?80900792") format("truetype"),
+    url("font/regelmann.svg?80900792#regelmann") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* source-sans-pro-300 - latin */
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 300;
+  src: url("font/source-sans-pro-v21-latin-300.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("font/source-sans-pro-v21-latin-300.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("font/source-sans-pro-v21-latin-300.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */ url("font/source-sans-pro-v21-latin-300.woff")
+      format("woff"),
+    /* Modern Browsers */ url("font/source-sans-pro-v21-latin-300.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("font/source-sans-pro-v21-latin-300.svg#SourceSansPro") format("svg"); /* Legacy iOS */
+}
+
+/* source-sans-pro-regular - latin */
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  src: url("font/source-sans-pro-v21-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("font/source-sans-pro-v21-latin-regular.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("font/source-sans-pro-v21-latin-regular.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */
+      url("font/source-sans-pro-v21-latin-regular.woff") format("woff"),
+    /* Modern Browsers */ url("font/source-sans-pro-v21-latin-regular.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("font/source-sans-pro-v21-latin-regular.svg#SourceSansPro")
+      format("svg"); /* Legacy iOS */
+}
+
+/* source-sans-pro-900 - latin */
+@font-face {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 900;
+  src: url("font/source-sans-pro-v21-latin-900.eot"); /* IE9 Compat Modes */
+  src: local(""),
+    url("font/source-sans-pro-v21-latin-900.eot?#iefix")
+      format("embedded-opentype"),
+    /* IE6-IE8 */ url("font/source-sans-pro-v21-latin-900.woff2")
+      format("woff2"),
+    /* Super Modern Browsers */ url("font/source-sans-pro-v21-latin-900.woff")
+      format("woff"),
+    /* Modern Browsers */ url("font/source-sans-pro-v21-latin-900.ttf")
+      format("truetype"),
+    /* Safari, Android, iOS */
+      url("font/source-sans-pro-v21-latin-900.svg#SourceSansPro") format("svg"); /* Legacy iOS */
+}
+
+/**********
+ BACKGROUND 
+ **********/
+
+.light-gray {
+  background-color: var(--light-gray);
+}
+.dark-gray {
+  background-color: var(--dark-gray);
+}
+.red {
+  background-color: var(--red);
+}
+.white {
+  background-color: var(--white);
+}
+
+/**********
+ COLOR 
+ **********/
+
+.text-white {
+  color: var(--white);
+}
+.text-black {
+  color: var(--black);
+}
+
+/**********
+ ALLGEMEIN 
+ **********/
+
+* {
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.row {
+  --bs-gutter-x: 0;
+  --bs-gutter-y: 0;
+}
+
+body {
+  background-color: var(--light-gray);
+  text-align: center;
+  max-width: 992px;
+  margin: 0 auto;
+}
+
+html {
+  background-color: var(--white);
+}
+
+.container {
+  max-width: 730px;
+}
+
+.row {
+  border-radius: 6px;
+}
+
+/**********
+ LOGO 
+ **********/
+
+.logo {
+  margin: 3rem 0 1rem 0;
+}
+
+.logo img {
+  width: 10rem;
+}
+
+/**********
+ Kundendaten 
+ **********/
+
+.radius {
+  border-radius: 6px;
+}
+
+#jobNumberInput {
+  padding: 5px 0;
+}
+
+span {
+  font-weight: bold;
+}
+
+.kundendaten {
+  text-align: left;
+  margin: 2rem 0 2rem 0;
+}
+
+/*Infos einblenden*/
+#infos {
+  opacity: 0;
+  transform: scale(0.75);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  visibility: hidden;
+  height: 0;
+  overflow: hidden;
+}
+
+#infos.show {
+  opacity: 1;
+  transform: scale(1);
+  visibility: visible;
+  height: auto;
+}
+
+/**********
+ CHECKLISTE 
+ **********/
+
+.checkliste {
+  padding: 1rem;
+  color: var(--white);
+}
+
+.checkliste-con {
+  margin: 4rem 0 3rem 0;
+}
+
+/**********
+ CHECKBTN 
+ **********/
+
+.checkRed {
+  fill: red;
+  transition: fill 0.5s ease;
+}
+
+.checkWhite {
+  fill: var(--white);
+  transition: fill 0.5s ease;
+}
+
+.checkGreen {
+  fill: var(--green);
+  transition: fill 0.5s ease;
+}
+
+.checkmark {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+
+/**********
+ BOXEN
+ **********/
+
+.boxGray {
+  padding: 15px 10px 0 10px;
+  display: flex;
+  align-items: center;
+  margin: 15px 5px 0 5px;
+}
+
+.anmerkung label {
+  font-weight: bold;
+}
+
+.box-container p {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.toggleElement {
+  max-height: 0; /* Element ist ausgeblendet */
+  opacity: 0; /* Element ist unsichtbar */
+  overflow: hidden; /* Inhalt wird ausgeblendet */
+  transition: max-height 0.5s ease-in-out, opacity 0.5s ease; /* Sanfte Übergänge */
+}
+
+.toggleElement.expanded {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.rotate {
+  rotate: 180deg;
+}
+
+/**********
+ DATUM 
+ **********/
+
+.datum {
+  margin: 1rem 0 4rem 0;
+}
+
+
+
+/**********
+ UNTERSCHRIFT
+ ***********/
+
+#signature-pad-1,
+#signature-pad-2 {
+  border: 2px solid #000;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 400px;
+  height: 100px;
+  background-color: #fff;
+  touch-action: none; /* Verhindert Scrollen auf Touch-Geräten */
+}
+
+#buttons-1,
+#buttons-2 {
+  margin-top: 10px;
+}
+
+button {
+  margin-right: 5px;
+  padding: 10px;
+}
+
+.unterschrift {
+  margin-top: 5rem;
+}
+
+/* .pad2 {
+  margin-top: 5rem !important;
+} */
+
+#pdfBTN {
+  margin-top: 5rem;
+}
+
+@media (max-width: 768px) {
+  .pad2 {
+    margin-top: 5rem !important;
+    text-align: left;
+  }
+
+  .pad1 {
+
+    text-align: left;
+  }
+}
+
+/**********
+ PDF 
+ **********/
+
+/* Logo standardmäßig für die Webseite ausblenden */
+.pdf-logo {
+  display: none;
+}
+
+/* Verhindert, dass der Inhalt des Elements innerhalb einer Seite getrennt wird */
+.kein-umbruch {
+  page-break-inside: avoid; /* Für ältere Browser */
+  break-inside: avoid; /* Für moderne Browser */
+}
+
+/* Erzwingt einen Seitenumbruch vor dem Element */
+.seitenumbruch-vorher {
+  page-break-before: always;
+  break-before: always;
+}
+
+/* Erzwingt einen Seitenumbruch nach dem Element */
+.seitenumbruch-nachher {
+  page-break-after: always;
+  break-after: always;
+}
+
+/**********
+ FOOTER 
+ **********/
+.footer {
+  margin-top: 10rem;
+  text-align: right;
+  padding-bottom: 5rem;
+}
+
+#footer {
+  margin-right: 1rem;
+}
+
+/* BOOTSTRAP */
+
+@media print {
+  title {
+    display: none;
+  }
+
+  .dark-gray {
+    background-color: #d9d9d9;
+  }
+
+  /* Bootstrap-Stile für mPDF (angepasst) */
+
+  /* Container */
+  .container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  /* Reihen und Spalten (Flexbox entfernt) */
+  .row {
+    display: block;
+    width: 100%;
+  }
+  .col {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+  }
+  .col-2 {
+    width: 16.6667%;
+    display: inline-block;
+  }
+  .col-11 {
+    width: 91.6667%;
+    display: inline-block;
+  }
+
+  /* Textausrichtung */
+  .text-center {
+    text-align: center;
+  }
+  .text-start {
+    text-align: left;
+  }
+  .text-white {
+    color: #fff;
+  }
+
+  /* Hintergrundfarben */
+  .bg-primary {
+    background-color: #0d6efd;
+    color: white;
+  }
+  .bg-secondary {
+    background-color: #6c757d;
+    color: white;
+  }
+  .bg-success {
+    background-color: #198754;
+    color: white;
+  }
+  .bg-danger {
+    background-color: #dc3545;
+    color: white;
+  }
+  .bg-warning {
+    background-color: #ffc107;
+    color: black;
+  }
+
+  /* Buttons */
+  .btn {
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid transparent;
+  }
+  .btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    border-color: #6c757d;
+  }
+  .btn-secondary:hover {
+    background-color: #545b62;
+  }
+
+  /* Formulare */
+  input,
+  select,
+  textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  /* Karten (Boxen) */
+  .card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #fff;
+    margin-bottom: 15px;
+  }
+
+  /* Tabellen */
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .table th,
+  .table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  .table thead {
+    background-color: #f8f9fa;
+    font-weight: bold;
+  }
+
+  /* Seitenumbruch für mPDF */
+  .page-break {
+    page-break-after: always;
+  }
+
+  .row {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  .col {
+    display: table-cell;
+    vertical-align: top;
+    padding: 10px;
+  }
+
+  .col-2 {
+    width: 16.6667%;
+  }
+
+  .col-11 {
+    width: 91.6667%;
+  }
+}
+
+.iconFirst {
+  width: 50px;
+}
+
+#save-1,
+#save-2 {
+  display: none;
+}
