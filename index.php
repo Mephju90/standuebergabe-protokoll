@@ -82,7 +82,7 @@
         <div class="container">
           <div class="row text-center">
             <div class="col logo">
-              <!-- <img src="img/regelmann_logo.svg" alt="Logo Regelmann" /> -->
+             
               <svg
                 version="1.1"
                 id="Ebene_1"
@@ -1782,7 +1782,7 @@
       <div class="container" id="footer">
         <div class="row footer text-muted">
           <div class="col">
-            <p>Werbeagentur Regelmann GmbH & Co. KG</p>
+            <p>Werbeagentur Beispiel GmbH & Co. KG</p>
           </div>
         </div>
       </div>
